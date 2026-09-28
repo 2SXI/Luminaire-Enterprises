@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminaire Enterprises — Workplace Safety, Harare</title>
+<meta name="description" content="Luminaire Enterprises — occupational safety and health in Harare, Zimbabwe. Call +263 775 067 807 or message on WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231E6B4B'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23F4B400' font-family='Arial Black'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14201B;
+    --paper:#F3F4EF;
+    --white:#FFFFFF;
+    --green:#1E6B4B;
+    --green-deep:#15503A;
+    --signal:#F4B400;
+    --line:#D6DACF;
+    --muted:#4E5A53;
+    --max:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Barlow',sans-serif;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-weight:600;line-height:1.05;margin:0;letter-spacing:.005em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+  :focus-visible{outline:3px solid var(--signal);outline-offset:3px;}
+
+  .hazard{height:10px;background:repeating-linear-gradient(-45deg,var(--signal) 0 14px,var(--ink) 14px 28px);}
+
+  header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line);}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:25px;letter-spacing:.01em;}
+  .brand .mark{width:34px;height:34px;border-radius:8px;background:var(--green);color:var(--signal);display:flex;align-items:center;justify-content:center;font-size:23px;}
+  nav.primary{display:flex;align-items:center;gap:32px;}
+  nav.primary a{text-decoration:none;font-weight:500;font-size:15.5px;padding:4px 0;border-bottom:2px solid transparent;}
+  nav.primary a:hover{border-bottom-color:var(--signal);}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff !important;padding:10px 20px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap;border-bottom:none !important;}
+  .pill:hover{background:var(--green-deep);}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-toggle svg{width:26px;height:26px;stroke:var(--ink);}
+  @media (max-width:860px){
+    nav.primary{position:fixed;inset:70px 0 0 0;background:var(--paper);flex-direction:column;align-items:flex-start;gap:0;padding:12px 28px 28px;opacity:0;pointer-events:none;transition:opacity .18s;border-top:1px solid var(--line);}
+    nav.primary.open{opacity:1;pointer-events:auto;}
+    nav.primary a{width:100%;padding:15px 0;border-bottom:1px solid var(--line);font-size:18px;}
+    nav.primary .pill{margin-top:16px;width:100%;justify-content:center;}
+    .menu-toggle{display:block;}
+  }
+
+  .hero{padding:64px 0 80px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px;}.hero{padding:40px 0 56px;}}
+  .loc{display:inline-block;background:var(--ink);color:var(--signal);font-weight:600;font-size:14px;padding:5px 12px;border-radius:4px;margin-bottom:18px;}
+  .hero h1{font-size:clamp(44px,7vw,80px);font-weight:700;}
+  .hero h1 span{color:var(--green);}
+  .lede{margin:22px 0 30px;max-width:46ch;font-size:18px;color:var(--muted);}
+  .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;}
+  .btn-primary{background:var(--signal);color:var(--ink);}
+  .btn-primary:hover{background:#DFA300;}
+  .btn-ghost{border-color:var(--ink);color:var(--ink);}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper);}
+  .btn svg{width:18px;height:18px;}
+  .status-line{display:flex;align-items:center;gap:10px;padding-top:24px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);}
+  .status-line .dot{width:10px;height:10px;border-radius:50%;background:#2E9E62;flex:none;}
+  .status-line strong{color:var(--ink);}
+
+  .photo-frame{position:relative;}
+  .photo-frame::after{content:'';position:absolute;right:-16px;bottom:-16px;width:62%;height:62%;background:var(--signal);z-index:0;border-radius:4px;}
+  .photo-frame img{position:relative;z-index:1;width:100%;aspect-ratio:5/6;object-fit:cover;border-radius:4px;background:var(--green);}
+  @media (max-width:900px){.photo-frame::after{right:-10px;bottom:-10px;}}
+
+  section{padding:76px 0;}
+  .section-head{max-width:56ch;margin-bottom:40px;}
+  .section-head h2{font-size:clamp(34px,4.6vw,50px);font-weight:700;}
+  .section-head p{margin-top:14px;color:var(--muted);}
+
+  .svc{border-top:2px solid var(--ink);}
+  .svc-row{display:grid;grid-template-columns:90px 1fr auto;gap:22px;align-items:start;padding:26px 0;border-bottom:1px solid var(--line);}
+  .svc-row .num{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:44px;line-height:1;color:var(--green);}
+  .svc-row h3{font-size:28px;font-weight:600;}
+  .svc-row p{margin:8px 0 0;color:var(--muted);max-width:56ch;font-size:16px;}
+  .svc-row .enq{font-weight:600;font-size:15px;color:var(--green);text-decoration:none;white-space:nowrap;padding-top:8px;}
+  .svc-row .enq:hover{text-decoration:underline;}
+  @media (max-width:640px){.svc-row{grid-template-columns:56px 1fr;}.svc-row .enq{grid-column:2;padding-top:0;}.svc-row .num{font-size:34px;}}
+
+  .note{margin-top:34px;background:var(--white);border:1px solid var(--line);border-left:5px solid var(--signal);border-radius:4px;padding:18px 22px;font-size:15px;color:var(--muted);}
+
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media (max-width:700px){.strip{grid-template-columns:1fr;}}
+  .strip figure{margin:0;position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;}
+  .strip img{width:100%;height:100%;object-fit:cover;}
+  .strip figcaption{position:absolute;left:0;bottom:0;background:var(--signal);color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 14px;}
+
+  .visit{background:var(--ink);color:var(--paper);}
+  .visit .section-head h2{color:#fff;}
+  .visit .section-head p{color:#B9C2BB;}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+  @media (max-width:860px){.visit-grid{grid-template-columns:1fr;gap:40px;}}
+  .visit h3{font-size:26px;color:var(--signal);margin-bottom:16px;}
+  .hours{width:100%;border-collapse:collapse;font-size:16px;}
+  .hours td{padding:10px 0;border-bottom:1px solid rgba(243,244,239,.16);}
+  .hours td:last-child{text-align:right;color:#CFD6D0;}
+  .hours tr.today td{color:#fff;font-weight:600;}
+  .hours tr.today td:first-child::before{content:'';display:inline-block;width:8px;height:8px;background:var(--signal);margin-right:10px;}
+  .block{margin-top:24px;padding-top:24px;border-top:1px solid rgba(243,244,239,.16);}
+  .block:first-of-type{margin-top:0;padding-top:0;border-top:none;}
+  .label{font-size:14px;color:#93A097;margin-bottom:6px;}
+  .value{font-size:18px;line-height:1.5;}
+  .dir{display:inline-flex;align-items:center;gap:7px;margin-top:10px;color:var(--signal);font-weight:600;text-decoration:none;}
+  .dir:hover{text-decoration:underline;}
+  .dir svg{width:17px;height:17px;}
+
+  .cta-band{background:var(--green);color:#fff;border-radius:6px;padding:52px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;}
+  @media (max-width:860px){.cta-band{grid-template-columns:1fr;padding:36px 24px;}}
+  .cta-band h2{font-size:clamp(32px,4vw,46px);font-weight:700;color:#fff;}
+  .cta-band p{margin-top:12px;color:#CFE6DB;max-width:44ch;}
+  .cta-actions{display:flex;flex-direction:column;gap:14px;}
+  .cta-actions .btn{justify-content:center;}
+  .cta-band .btn-ghost{border-color:rgba(255,255,255,.7);color:#fff;}
+  .cta-band .btn-ghost:hover{background:rgba(255,255,255,.14);}
+
+  footer{padding:36px 0;border-top:1px solid var(--line);}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--muted);}
+</style>
+</head>
+<body>
+
+<div class="hazard" aria-hidden="true"></div>
+<header>
+  <div class="wrap nav-row">
+    <a href="#top" class="brand"><span class="mark">L</span>Luminaire Enterprises</a>
+    <nav class="primary" id="primaryNav">
+      <a href="#services">Services</a>
+      <a href="#visit">Visit &amp; hours</a>
+      <a href="#contact">Contact</a>
+      <a class="pill" href="https://wa.me/263775067807?text=Hello%20Luminaire%20Enterprises%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">WhatsApp us</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="loc">Colenbrander Road, Harare</span>
+        <h1>Safer workplaces, <span>done properly.</span></h1>
+        <p class="lede">Luminaire Enterprises supports businesses in Harare with occupational safety and health. Get in touch to talk through what your site or team needs.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="https://wa.me/263775067807?text=Hello%20Luminaire%20Enterprises%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            WhatsApp us
+          </a>
+          <a class="btn btn-ghost" href="tel:+263775067807">Call 077 506 7807</a>
+        </div>
+        <div class="status-line"><span class="dot" id="dot"></span><span id="openStatus"><strong>Checking hours…</strong></span></div>
+      </div>
+      <div class="photo-frame">
+        <img src="https://images.unsplash.com/photo-1552879890-3a06dd3a06c2?auto=format&fit=crop&w=1000&q=80" alt="Rack of yellow safety hard hats">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="padding-top:20px;">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How we can help</h2>
+        <p>Message us on WhatsApp with what you need and we'll come back with the right next step.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-row">
+          <div class="num">01</div>
+          <div><h3>Safety inspections &amp; risk assessments</h3><p>A walk-through of your site or premises to spot hazards and put clear priorities on them.</p></div>
+          <a class="enq" href="https://wa.me/263775067807?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20safety%20inspections" target="_blank" rel="noopener">Enquire</a>
+        </div>
+        <div class="svc-row">
+          <div class="num">02</div>
+          <div><h3>Safety training</h3><p>Practical sessions and toolbox talks that keep your team clear on safe working habits.</p></div>
+          <a class="enq" href="https://wa.me/263775067807?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20safety%20training" target="_blank" rel="noopener">Enquire</a>
+        </div>
+        <div class="svc-row">
+          <div class="num">03</div>
+          <div><h3>Protective equipment</h3><p>Helmets, vests and other personal protective equipment for your workers.</p></div>
+          <a class="enq" href="https://wa.me/263775067807?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20protective%20equipment" target="_blank" rel="noopener">Enquire</a>
+        </div>
+        <div class="svc-row">
+          <div class="num">04</div>
+          <div><h3>Compliance &amp; safety policy support</h3><p>Help putting written safety policies and procedures in place for your business.</p></div>
+          <a class="enq" href="https://wa.me/263775067807?text=Hello%2C%20I%27d%20like%20to%20enquire%20about%20safety%20policy%20support" target="_blank" rel="noopener">Enquire</a>
+        </div>
+      </div>
+      <div class="note">Starter version: the photos are stock images and the service list is a general outline for the occupational safety category. Both get replaced with Luminaire's real services and photos before launch.</div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="strip">
+        <figure><img src="https://images.unsplash.com/photo-1622612023350-b15f063eabe6?auto=format&fit=crop&w=700&q=80" alt="Worker in a high-visibility vest and white helmet"><figcaption>On site</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1659353589040-398b5b345bfb?auto=format&fit=crop&w=700&q=80" alt="Two men wearing hard hats"><figcaption>Teams</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc?auto=format&fit=crop&w=700&q=80" alt="Red hard hat resting on pavement"><figcaption>Equipment</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" class="visit">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Visit us</h2>
+        <p>Open six days a week in Harare.</p>
+      </div>
+      <div class="visit-grid">
+        <div>
+          <h3>Hours</h3>
+          <table class="hours" id="hoursTable">
+            <tr data-day="1"><td>Monday</td><td>07:00 – 17:00</td></tr>
+            <tr data-day="2"><td>Tuesday</td><td>07:00 – 17:00</td></tr>
+            <tr data-day="3"><td>Wednesday</td><td>07:00 – 17:00</td></tr>
+            <tr data-day="4"><td>Thursday</td><td>07:00 – 17:00</td></tr>
+            <tr data-day="5"><td>Friday</td><td>07:00 – 17:00</td></tr>
+            <tr data-day="6"><td>Saturday</td><td>07:00 – 17:00</td></tr>
+            <tr data-day="0"><td>Sunday</td><td>Closed</td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>Find us</h3>
+          <div class="block">
+            <div class="label">Address</div>
+            <div class="value">21 Colenbrander Road<br>Harare, Zimbabwe</div>
+            <a class="dir" href="https://www.google.com/maps/search/?api=1&query=Luminaire+Enterprises+21+Colenbrander+Rd+Harare+Zimbabwe" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Get directions
+            </a>
+          </div>
+          <div class="block">
+            <div class="label">Phone</div>
+            <div class="value"><a href="tel:+263775067807" style="text-decoration:none;">+263 775 067 807</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>Let's talk safety.</h2>
+          <p>Send a WhatsApp message with what you need, or call during opening hours.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="https://wa.me/263775067807?text=Hello%20Luminaire%20Enterprises%2C%20I%27d%20like%20to%20make%20an%20enquiry" target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+263775067807">Call 077 506 7807</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> Luminaire Enterprises, Harare</span>
+    <span>Site by SXI Digital</span>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('primaryNav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); toggle.setAttribute('aria-expanded', false);
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Open/closed in Harare time (CAT, UTC+2, no DST)
+  const hours = {0:null,1:[7,17],2:[7,17],3:[7,17],4:[7,17],5:[7,17],6:[7,17]};
+  const cat = new Date(Date.now() + 2*60*60*1000);
+  const day = cat.getUTCDay();
+  const hr = cat.getUTCHours() + cat.getUTCMinutes()/60;
+  const t = hours[day];
+  const isOpen = !!t && hr >= t[0] && hr < t[1];
+  document.getElementById('openStatus').innerHTML = isOpen
+    ? '<strong>Open now</strong> · until 17:00' : '<strong>Closed now</strong> · Mon–Sat 07:00–17:00';
+  document.getElementById('dot').style.background = isOpen ? '#2E9E62' : '#C9663F';
+  document.querySelectorAll('#hoursTable tr').forEach(r => {
+    if (parseInt(r.dataset.day, 10) === day) r.classList.add('today');
+  });
+</script>
+</body>
+</html>
